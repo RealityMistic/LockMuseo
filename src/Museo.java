@@ -19,7 +19,7 @@ class Museo {
 		exclusion.lock();
 		try {
 			ocupacion = ocupacion + 1;
-			pantalla.escribir("Entra un visitante. Hay " + ocupacion);
+			pantalla.escribir("Entra un visitante con cerrojo. Hay " + ocupacion);
 		} finally {
 			exclusion.unlock();
 		}
@@ -29,7 +29,7 @@ class Museo {
 		exclusion.lock();
 		try {
 			ocupacion = ocupacion - 1;
-			pantalla.escribir("Sale un visitante. Hay " + ocupacion);
+			pantalla.escribir("Sale un visitante con cerrojo. Hay " + ocupacion);
 		} finally {
 			exclusion.unlock();
 		}
